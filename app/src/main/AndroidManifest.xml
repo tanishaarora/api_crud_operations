@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myapplication">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.MyApplication">
+        
+        <receiver
+            android:name=".AirplaneModeChangeReceiver"
+            android:exported="false">
+        </receiver>
+
+        <activity
+            android:name=".GPSTracking"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar"/>
+
+        <activity
+            android:name=".CrudUpdate"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar"/>
+        <activity
+            android:name=".Crud_submit"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar"/>
+
+        <activity
+            android:name=".Crud"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar"/>
+
+        <activity
+            android:name=".RetroPostMethod"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar"/>
+        <activity
+            android:name=".VolleyLogin"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar"/>
+        <activity
+            android:name=".VolleyMain"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar"/>
+        <activity
+            android:name=".RetroMain"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar"/>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
